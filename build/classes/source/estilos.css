@@ -1,0 +1,31 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11-10-2017, 10:12:30
+    Author     : Usuario
+*/
+
+#andenOcupado{
+    -fx-text-fill: white;
+    -fx-background-color: red;
+    -fx-font-size: 16px;
+}
+
+#andenReservado{
+    -fx-text-fill: white;
+    -fx-background-color: #9999ff;
+    -fx-font-size: 16px;
+}
+
+#andenDisponible{
+    -fx-text-fill: white;
+    -fx-background-color: #009900;
+    -fx-font-size: 16px;
+}
+
+#andenDisponible:hover{
+    -fx-background-color: #33ff33;
+}
