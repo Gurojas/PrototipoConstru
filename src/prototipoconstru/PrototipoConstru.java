@@ -46,10 +46,8 @@ public class PrototipoConstru extends Application {
         textPanelCenter.setFont(new Font(20));
         
         HBox panelAnden1 = new HBox(20);
-        panelAnden1.setStyle("-fx-background-color:blue;");
         panelAnden1.setAlignment(Pos.CENTER);
         HBox panelAnden2 = new HBox(20);
-        panelAnden2.setStyle("-fx-background-color:yellow;");
         panelAnden2.setAlignment(Pos.CENTER);
         HBox panelAnden3 = new HBox(20);
         panelAnden3.setAlignment(Pos.CENTER);
