@@ -12,12 +12,14 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Control;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Region;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
@@ -38,7 +40,7 @@ public class PrototipoConstru extends Application {
         
         double w = 150;
         double h = 100;
-        int fontSize = 16;
+        int fontSize = 16; // 
         
         VBox panelCenter = new VBox(20);
         panelCenter.setAlignment(Pos.CENTER);
@@ -46,16 +48,13 @@ public class PrototipoConstru extends Application {
         textPanelCenter.setFont(new Font(20));
         
         HBox panelAnden1 = new HBox(20);
-        panelAnden1.setStyle("-fx-background-color:blue;");
         panelAnden1.setAlignment(Pos.CENTER);
         HBox panelAnden2 = new HBox(20);
-        panelAnden2.setStyle("-fx-background-color:yellow;");
         panelAnden2.setAlignment(Pos.CENTER);
         HBox panelAnden3 = new HBox(20);
         panelAnden3.setAlignment(Pos.CENTER);
         
-        
-        
+   
         Button anden1 = new Button("Anden 1");
         anden1.setPrefSize(w, h);
         anden1.setId("andenOcupado");
@@ -63,7 +62,6 @@ public class PrototipoConstru extends Application {
         Button anden2 = new Button("Anden 2");
         anden2.setPrefSize(w, h);
         anden2.setId("andenDisponible");
-        
         
         Button anden3 = new Button("Anden 3");
         anden3.setPrefSize(w, h);
@@ -86,9 +84,10 @@ public class PrototipoConstru extends Application {
         panelAnden3.getChildren().addAll(anden5,anden6);
         
         BorderPane.setAlignment(panelCenter, Pos.CENTER);
-            
-        
+
         panelCenter.getChildren().addAll(textPanelCenter,panelAnden1,panelAnden2,panelAnden3);
+        root.setCenter(panelCenter);
+        
         
         VBox panelRight = new VBox(10);
         panelRight.setAlignment(Pos.CENTER);
@@ -104,6 +103,7 @@ public class PrototipoConstru extends Application {
         panelTextoRight.getChildren().addAll(textoNotitificacion, logoNotificacion);
               
         ListView<String> listaNotificaciones = new ListView();
+
         listaNotificaciones.setPrefHeight(200);
         listaNotificaciones.setPrefWidth(200);
         
@@ -145,12 +145,7 @@ public class PrototipoConstru extends Application {
         
         panelMensaje.getChildren().addAll(textoMensaje,textoPara,fieldCorreo,textoAsunto,fieldAsunto,areaAsunto,panelBotones);
         
-        panelRight.getChildren().addAll(panelMensaje);
-        
-        
-        
-        
-        root.setCenter(panelCenter);
+        panelRight.getChildren().addAll(panelMensaje);        
         root.setRight(panelRight);
         
         
