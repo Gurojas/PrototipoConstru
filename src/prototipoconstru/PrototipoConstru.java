@@ -35,6 +35,7 @@ public class PrototipoConstru extends Application {
     @Override
     public void start(Stage primaryStage) {
         System.out.println("hola");
+        System.out.println("Me gusta el cereal");
         BorderPane root = new BorderPane();
         root.setPadding(new Insets(20));
         
